@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@400;700&display=swap');
+
+/* General styles */
+
+body {
+    font-family: Roboto, sans-serif;
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 4px;
+}
+
+@media screen and (min-width: 960px) {
+    body {
+        font-size: 1.1rem;
+    }
+}
+
+h1,
+h2 {
+    font-family: 'Roboto Slab', serif;
+}
+
+ul {
+    padding-left: 1em;
+}
+
+a:focus,
+a:hover {
+    outline: medium solid red;
+    text-decoration: none;
+}
+
+a[target="_blank"]::before {
+    content: url(images/external-link-alt-solid.svg);
+    margin-right: 0.2em;
+}
+
+a[target="_blank"] img {
+    width: 1em;
+    height: 1em;
+}
+
+/* header */
+header h1 {
+    margin-top: .4em;
+    letter-spacing: 3px;
+}
+
+header p {
+    color: #696969;
+}
+
+/* main */
+
+main section h2,
+main section h3 {
+    margin-top: .6em;
+}
+
+section.qualifications li {
+    list-style-type: square;
+}
+
+section.introduction p {
+    margin-top: .8em;
+}
+
+section.introduction li {
+    list-style-type: disc;
+    margin-left: 3em;
+}
+
+section.introduction div {
+    margin-left: 1em;
+}
+
+section.introduction ul {
+    margin-top: .6em;
+    background-color: aliceblue;
+    padding: .6em 0;
+}
+
+/* footer */
+footer {
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+footer ul li:first-child {
+    margin-left: 0;
+}
+
+footer ul li {
+    margin-left: 1em;
+}
+
+footer ul li img {
+    height: 2em;
+}
+
+footer ul li:nth-child(3) a {
+    background-image: url('images/icons8-skype.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+    padding-left: 1.4em;
+}
+
+a[href^="mailto"]::before {
+    content: "📧 ";
+}
+
+a[href^="tel"]::before {
+    content: "📞 ";
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 480px) {
+    .modal-content img {
+        width: 100vw;
+    }
+
+    section.introduction p {
+        margin-left: 0em;
+    }
+}
+
+
+.close-button {
+    float: right;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
