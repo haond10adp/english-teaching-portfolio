@@ -80,6 +80,12 @@ section.introduction ul {
     padding: .6em 0;
 }
 
+audio {
+    display: block;
+    margin-top: 1em;
+}
+
+
 /* footer */
 footer {
     margin-top: 3em;
@@ -131,6 +137,7 @@ a[href^="tel"]::before {
     opacity: 0;
     visibility: hidden;
     transform: scale(1.1);
+    z-index: 2;
 }
 
 .modal-content {
@@ -146,8 +153,12 @@ a[href^="tel"]::before {
         width: 100vw;
     }
 
-    section.introduction p {
-        margin-left: 0em;
+    section.introduction div {
+        margin-left: 0;
+    }
+
+    body {
+        padding: 0 .4em;
     }
 }
 
