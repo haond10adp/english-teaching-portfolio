@@ -55,6 +55,7 @@ header p {
 main section h2,
 main section h3 {
     margin-top: .6em;
+    margin-bottom: .6em;
 }
 
 section.qualifications li {
